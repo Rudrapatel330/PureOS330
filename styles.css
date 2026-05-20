@@ -2514,9 +2514,12 @@ body.theme-light .input-group input {
 /* --------------------------------------------------------------------------
    13. RESPONSIVE DESIGN (MEDIA QUERIES)
    -------------------------------------------------------------------------- */
+
+/* ===================== TABLET LANDSCAPE (≤1024px) ===================== */
 @media (max-width: 1024px) {
     .bento-grid {
         grid-auto-rows: auto;
+        gap: 20px;
     }
     .card-large, .card-medium, .card-small {
         grid-column: span 12;
@@ -2535,60 +2538,553 @@ body.theme-light .input-group input {
         flex-wrap: wrap;
     }
     .callout-card {
-        display: none; /* Hide interactive pointer cards on tablet/mobile for UX */
+        display: none;
     }
     .pointer-lines-svg {
         display: none;
     }
+    
+    .kernel-container {
+        gap: 30px;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .hero-section {
+        min-height: 600px;
+    }
+    
+    .stat-boxes {
+        gap: 15px;
+    }
+    
+    .desktop-container {
+        height: 550px;
+    }
+    
+    .carousel-container {
+        max-width: 90%;
+    }
+    
+    .nav-container {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+    }
 }
 
+/* ===================== TABLET PORTRAIT (≤768px) ===================== */
 @media (max-width: 768px) {
+    /* -- Navigation -- */
     .nav-container, .nav-actions .btn-cta {
         display: none;
     }
     .mobile-menu-toggle {
         display: block;
     }
-    
-    .hero-title {
-        font-size: 15vw;
+    .nav-actions {
+        gap: 10px;
+    }
+    .navbar {
+        height: 60px;
+        padding: 0 4%;
+    }
+    .logo-text {
+        font-size: 24px;
     }
     
+    /* -- Hero Section -- */
+    .hero-section {
+        min-height: 520px;
+        height: auto;
+        padding: 100px 5% 60px;
+    }
+    .hero-title {
+        font-size: 15vw;
+        margin-bottom: 15px;
+    }
+    .hero-subtitle {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .hero-btns {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .hero-btns a {
+        width: 80%;
+        text-align: center;
+    }
+    .binary-stream-container {
+        display: none;
+    }
+    .bottom-right-tag {
+        display: none;
+    }
+    .scroll-indicator {
+        display: none;
+    }
+    .hero-glow-orb {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* -- Section Headers -- */
+    .section-title {
+        font-size: 8vw;
+        letter-spacing: -0.5px;
+    }
+    .section-subtitle {
+        font-size: 15px;
+        padding: 0 5%;
+    }
+    .section-header {
+        margin-bottom: 35px;
+    }
+    .badge-wrapper {
+        width: 55px;
+        height: 55px;
+    }
+    
+    /* -- Features Section -- */
+    .features-section {
+        padding: 70px 4%;
+    }
+    .bento-grid {
+        gap: 15px;
+    }
+    .bento-card {
+        padding: 25px 20px;
+    }
+    .bento-card h3 {
+        font-size: 18px;
+    }
+    .bento-desc {
+        font-size: 13px;
+    }
+    
+    /* -- OS Simulator -- */
+    .simulator-section {
+        padding: 60px 0;
+    }
+    .desktop-container {
+        height: 480px;
+    }
+    .container-fluid {
+        width: 95%;
+    }
+    .desktop-icons {
+        left: 10px;
+        top: 10px;
+        grid-template-rows: repeat(auto-fill, 70px);
+        gap: 12px;
+    }
+    .desktop-icon {
+        width: 65px;
+        height: 65px;
+    }
+    .icon-wrapper {
+        font-size: 24px;
+    }
+    .icon-label {
+        font-size: 9px;
+    }
+    .os-window {
+        width: 92% !important;
+        height: 340px !important;
+        left: 4% !important;
+        top: 35px !important;
+    }
+    .fe-sidebar, .settings-nav {
+        width: 100px;
+    }
+    .taskbar {
+        height: 42px;
+    }
+    
+    /* -- Kernel Section -- */
+    .kernel-section {
+        padding: 70px 4%;
+    }
     .kernel-container {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
     }
     .kernel-diagram {
         width: 100%;
     }
+    .kernel-info-panel {
+        width: 100%;
+    }
     
-    /* OS Simulator adjust for touch devices */
-    .desktop-container {
-        height: 520px;
+    /* -- Gallery -- */
+    .gallery-section {
+        padding: 70px 4%;
     }
-    .desktop-icons {
-        left: 15px;
-        top: 15px;
-        grid-template-rows: repeat(auto-fill, 75px);
+    .carousel-container {
+        max-width: 100%;
+    }
+    .carousel-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+    
+    /* -- About Section -- */
+    .about-section {
+        padding: 70px 4%;
+    }
+    .about-text {
+        font-size: 15px;
+    }
+    .stat-boxes {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .stat-box {
+        min-width: calc(50% - 8px);
+    }
+    .stat-num {
+        font-size: 28px;
+    }
+    
+    /* -- Footer -- */
+    .footer {
+        padding: 50px 4% 25px;
+    }
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-logo {
+        max-width: 100%;
+    }
+    .footer-links-grid {
+        gap: 30px;
+    }
+    .footer-bottom {
+        flex-direction: column;
         gap: 15px;
+        text-align: center;
     }
-    .desktop-icon {
-        width: 70px;
-        height: 70px;
+    
+    /* -- Contact Card -- */
+    .about-contact-card {
+        padding: 30px 20px;
     }
-    .icon-wrapper {
-        font-size: 26px;
+    .contact-form {
+        gap: 10px;
     }
-    .os-window {
-        width: 90% !important;
-        height: 360px !important;
-        left: 5% !important;
-        top: 40px !important;
-    }
-    .fe-sidebar, .settings-nav {
-        width: 110px;
+    
+    /* -- Theme Dropdown -- */
+    .theme-select-dropdown {
+        right: -20px;
     }
 }
+
+/* ===================== MOBILE (≤480px) ===================== */
+@media (max-width: 480px) {
+    /* -- Navigation -- */
+    .navbar {
+        height: 56px;
+        padding: 0 3%;
+    }
+    .logo-text {
+        font-size: 22px;
+    }
+    .theme-select-trigger {
+        width: 36px;
+        height: 36px;
+    }
+    
+    /* -- Hero -- */
+    .hero-section {
+        min-height: 450px;
+        padding: 90px 4% 50px;
+    }
+    .hero-title {
+        font-size: 18vw;
+        letter-spacing: -1px;
+        margin-bottom: 12px;
+    }
+    .hero-subtitle {
+        font-size: 13px;
+    }
+    .hero-btns a {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    .hero-bg-grid {
+        display: none;
+    }
+    
+    /* -- Section Headers -- */
+    .section-title {
+        font-size: 9vw;
+    }
+    .section-subtitle {
+        font-size: 14px;
+    }
+    .badge-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+    .badge-text {
+        font-size: 9px;
+    }
+    
+    /* -- Features -- */
+    .features-section {
+        padding: 50px 3%;
+    }
+    .bento-grid {
+        gap: 12px;
+    }
+    .bento-card {
+        padding: 20px 16px;
+    }
+    .bento-card h3 {
+        font-size: 16px;
+    }
+    .bento-desc {
+        font-size: 12px;
+    }
+    .card-icon {
+        font-size: 20px;
+    }
+    .bento-tag {
+        font-size: 9px;
+        padding: 3px 8px;
+    }
+    
+    /* -- VFS Visualizer in feature card -- */
+    .vfs-visualizer {
+        height: 110px;
+    }
+    .vfs-sidebar {
+        width: 90px;
+    }
+    
+    /* -- OS Simulator -- */
+    .simulator-section {
+        padding: 50px 0;
+    }
+    .desktop-container {
+        height: 400px;
+    }
+    .container-fluid {
+        width: 97%;
+    }
+    .desktop-icons {
+        left: 8px;
+        top: 8px;
+        grid-template-rows: repeat(auto-fill, 65px);
+        gap: 10px;
+    }
+    .desktop-icon {
+        width: 58px;
+        height: 58px;
+    }
+    .icon-wrapper {
+        font-size: 22px;
+    }
+    .icon-label {
+        font-size: 8px;
+    }
+    .os-window {
+        width: 95% !important;
+        height: 300px !important;
+        left: 2.5% !important;
+        top: 30px !important;
+    }
+    .window-titlebar {
+        height: 30px;
+        padding: 0 8px;
+    }
+    .win-title {
+        font-size: 11px;
+    }
+    .win-btn {
+        width: 10px;
+        height: 10px;
+    }
+    .fe-sidebar, .settings-nav {
+        width: 85px;
+        font-size: 11px;
+    }
+    .taskbar {
+        height: 38px;
+    }
+    .start-btn {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .taskbar-time {
+        font-size: 11px;
+        padding: 0 8px;
+    }
+    
+    /* -- Kernel -- */
+    .kernel-section {
+        padding: 50px 3%;
+    }
+    .kernel-layer {
+        padding: 16px;
+    }
+    .layer-name {
+        font-size: 14px;
+    }
+    .layer-desc {
+        font-size: 11px;
+    }
+    .kernel-info-panel {
+        padding: 25px 15px;
+    }
+    .spec-value {
+        font-size: 13px;
+    }
+    
+    /* -- Gallery -- */
+    .gallery-section {
+        padding: 50px 3%;
+    }
+    .carousel-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+    .slide-card {
+        padding: 20px 15px;
+    }
+    
+    /* -- About -- */
+    .about-section {
+        padding: 50px 3%;
+    }
+    .about-text {
+        font-size: 14px;
+    }
+    .stat-num {
+        font-size: 24px;
+    }
+    .stat-label {
+        font-size: 11px;
+    }
+    .about-contact-card {
+        padding: 25px 15px;
+    }
+    .contact-form input {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    
+    /* -- Footer -- */
+    .footer {
+        padding: 40px 3% 20px;
+    }
+    .footer-links-grid {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .footer-socials {
+        gap: 16px;
+    }
+    .footer-socials a {
+        font-size: 16px;
+    }
+    
+    /* -- Mobile Nav Drawer -- */
+    .mobile-nav {
+        padding-top: 70px;
+    }
+    .mobile-nav-link {
+        font-size: 18px;
+    }
+    .mobile-theme-tray {
+        justify-content: center;
+    }
+}
+
+/* ===================== SMALL MOBILE (≤360px) ===================== */
+@media (max-width: 360px) {
+    .navbar {
+        height: 52px;
+    }
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .hero-title {
+        font-size: 20vw;
+    }
+    .hero-subtitle {
+        font-size: 12px;
+    }
+    
+    .section-title {
+        font-size: 10vw;
+    }
+    
+    .desktop-container {
+        height: 350px;
+    }
+    .os-window {
+        height: 260px !important;
+    }
+    
+    .stat-boxes {
+        flex-direction: column;
+    }
+    .stat-box {
+        min-width: 100%;
+    }
+    
+    .bento-card {
+        padding: 18px 14px;
+    }
+    
+    .kernel-layer {
+        padding: 14px;
+    }
+    
+    .footer-links-grid {
+        gap: 20px;
+    }
+}
+
+/* ===================== HEIGHT-CONSTRAINED (short screens) ===================== */
+@media (max-height: 600px) {
+    .hero-section {
+        min-height: 400px;
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    .hero-title {
+        margin-bottom: 10px;
+    }
+}
+
+/* ===================== CURSOR/TOUCH DEVICE ===================== */
+@media (hover: none) and (pointer: coarse) {
+    .custom-cursor,
+    .custom-cursor-glow,
+    #cursorTrailCanvas {
+        display: none !important;
+    }
+    .tilt-card {
+        transform: none !important;
+    }
+    .bento-card .card-glow-follow {
+        display: none;
+    }
+}
+
 
 /* ==========================================================================
    PER-SECTION COLOR PALETTES — Each section has a unique color world.
