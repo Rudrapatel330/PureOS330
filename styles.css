@@ -204,6 +204,9 @@ body.accent-purple {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -211,6 +214,9 @@ body {
     color: var(--color-primary-text);
     font-family: var(--font-body);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
     transition: background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
@@ -509,6 +515,12 @@ li {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* --------------------------------------------------------------------------
@@ -2783,7 +2795,7 @@ body.theme-light .input-group input {
     
     /* -- Theme Dropdown -- */
     .theme-select-dropdown {
-        right: -20px;
+        right: 0;
     }
 }
 
