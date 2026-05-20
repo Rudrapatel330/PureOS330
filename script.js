@@ -1957,40 +1957,40 @@ window.addEventListener('load', () => {
         });
     });
     
-    /* --------------------------------------------------------------------------
-       L. SMOOTH PARALLAX ON SECTION SCROLL
-       -------------------------------------------------------------------------- */
-    // Features section header has subtle parallax
-    gsap.to('#features .section-title', {
-        y: -20,
-        scrollTrigger: {
-            trigger: '#features',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 2
-        }
-    });
-    
-    // Kernel diagram has depth parallax
-    gsap.to('.kernel-diagram', {
-        y: -15,
-        scrollTrigger: {
-            trigger: '#kernel',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 2.5
-        }
-    });
-    
-    gsap.to('.kernel-info-panel', {
-        y: -30,
-        scrollTrigger: {
-            trigger: '#kernel',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 3
-        }
-    });
+    // Smooth parallax scrolling animations (Desktop only)
+    if (window.matchMedia('(pointer: fine)').matches) {
+        // Features section header has subtle parallax
+        gsap.to('#features .section-title', {
+            y: -20,
+            scrollTrigger: {
+                trigger: '#features',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 2
+            }
+        });
+        
+        // Kernel diagram has depth parallax
+        gsap.to('.kernel-diagram', {
+            y: -15,
+            scrollTrigger: {
+                trigger: '#kernel',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 2.5
+            }
+        });
+        
+        gsap.to('.kernel-info-panel', {
+            y: -30,
+            scrollTrigger: {
+                trigger: '#kernel',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 3
+            }
+        });
+    }
     
 
     /* --------------------------------------------------------------------------

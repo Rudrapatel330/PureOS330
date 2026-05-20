@@ -2650,6 +2650,8 @@ body.theme-light .input-group input {
     .section-title {
         font-size: 8vw;
         letter-spacing: -0.5px;
+        line-height: 1.25;
+        margin-bottom: 22px;
     }
     .section-subtitle {
         font-size: 15px;
@@ -2839,6 +2841,8 @@ body.theme-light .input-group input {
     /* -- Section Headers -- */
     .section-title {
         font-size: 9vw;
+        line-height: 1.25;
+        margin-bottom: 18px;
     }
     .section-subtitle {
         font-size: 14px;
@@ -3041,6 +3045,8 @@ body.theme-light .input-group input {
     
     .section-title {
         font-size: 10vw;
+        line-height: 1.25;
+        margin-bottom: 16px;
     }
     
     .desktop-container {
